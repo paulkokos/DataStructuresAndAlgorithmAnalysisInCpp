@@ -18,16 +18,13 @@ IntCell::IntCell() {
  * Initial value is initialValue
  */
 
-IntCell::IntCell(int initialValue) {
-    storedValue = initialValue;
-
-}
+explicit IntCell::IntCell(int initialValue =0) : storedValue(initialValue) {}
 
 /*
  * Return the storedValue
  */
 
-int IntCell::read() {
+int IntCell::read() const {
 
     return storedValue;
 }

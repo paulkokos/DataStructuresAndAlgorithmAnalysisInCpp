@@ -9,8 +9,8 @@
 class IntCell {
 public:
     IntCell();
-    IntCell( int initialValue);
-    int read();
+    explicit IntCell( int initialValue);
+    int read() const ;
     void write(int x);
 
 private:
