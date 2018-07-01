@@ -3,16 +3,17 @@
 //
 
 #include <iostream>
+int bad (int n);
 int main(){
-    f(10);
+    bad(10);
     return 0;
 }
 
-int f (int x) {
-    if (x == 0) {
+int bad (int n) {
+    if (n == 0) {
         return 0;
     } else {
-
-        return 2 * f(x-1) + x*x;
+        return (bad(n/3+1) + n -1);
     }
+
 }
