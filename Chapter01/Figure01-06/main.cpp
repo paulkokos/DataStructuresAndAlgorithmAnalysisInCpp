@@ -6,8 +6,8 @@
 #include "IntCell.h"
 using namespace std;
 int main(){
-    auto *cell1= new IntCell(100);
-    auto *cell2 = new IntCell(200);
+    IntCell *cell1= new IntCell(100);
+    IntCell *cell2 = new IntCell(200);
 
     cout <<cell1->read() << "\n";
     cell1->write(1000);
@@ -16,6 +16,5 @@ int main(){
     cout <<cell2->read() << "\n";
     cell2->write(2000);
     cout << cell2->read()<< "\n";
-
     return 0;
 }
