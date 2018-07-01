@@ -4,5 +4,6 @@ project(DataStructuresAndAlgorithmAnalysisInCpp)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
 
-add_executable(DataStructuresAndAlgorithmAnalysisInCpp main.cpp)
+add_subdirectory(Chapter01/Figure01-02)
+#add_executable(DataStructuresAndAlgorithmAnalysisInCpp main.cpp)
 

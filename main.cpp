@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <utility>
 using namespace std;
 
 template <typename Comparable>
@@ -20,48 +22,49 @@ const Comparable & findMax(const vector<Comparable> &a)
 }
 //Class IntCell
 class IntCell {
-	public:
-		explicit IntCell(int initialValue = 0)
-		{ storedValue = new int{initialValue};}
+public:
+    explicit IntCell(int initialValue = 0) { storedValue = new int{initialValue}; }
 
-		~IntCell() {
-			delete storedValue;
-		}
+    ~IntCell() {
+        delete storedValue;
+    }
 
-		IntCell(const IntCell &rhs){
-			storedValue = new int {*rhs.storedValue};
-		}
+    IntCell(const IntCell &rhs) {
+        storedValue = new int{*rhs.storedValue};
+    }
 
-		IntCell(IntCell && rhs) : storedValue {rhs.storedValue}
-		{rhs.storedValue = nullptr;}
+    IntCell(IntCell &&rhs) : storedValue{rhs.storedValue} { rhs.storedValue = nullptr; }
 
-		IntCell & operator=(const IntCell & rhs) {
-			if (this != &rhs) {
-				*storedValue = *rhs.storedValue;
-			}
-			return *this;
-		}
+    IntCell &operator=(const IntCell &rhs) {
+        if (this != &rhs) {
+            *storedValue = *rhs.storedValue;
+        }
+        return *this;
+    }
 
-		IntCell & operator = (IntCell && rhs) {
-			std::swap(storedValue,rhs.storedValue);
-			return *this;
-		}
+//    IntCell &operator=(IntCell &&rhs) {
+//        std::swap(storedValue, rhs.storedValue);
+//        std::swap(storedValue, rhs.storedValue);
+//        return *this;
+//    }
 
-		int read () const {
-			return *storedValue;
-		}
-		void write (int x) {
-			*storedValue = x;
-		}
-	private:
-		int *storedValue;
+    int read() const {
+        return *storedValue;
+    }
+
+    void write(int x) {
+        *storedValue = x;
+    }
+
+private:
+    int *storedValue;
 };
 
-int main(){
-    vector<int> v1 (60);
-    vector<double> v2 (60);
-    vector<string> v3 (60);
-    vector<IntCell> v4 (60);
+int main() {
+    vector<int> v1(60);
+    vector<double> v2(60);
+    vector<string> v3(60);
+    vector<IntCell> v4(60);
 
     cout << findMax(v1) << endl;
     cout << findMax(v2) << endl;
