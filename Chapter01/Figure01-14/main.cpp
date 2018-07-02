@@ -13,8 +13,14 @@ void swap (vector<string>& x, vector<string> &y);
 
 
 int main(){
+    double a=10.33,b=20.33;
+    string string1 = "daidalos";
+    string string2 = "daidaloukos";
+    swap(a,b);
+    swap(string1,string2);
 
-
+    cout << string1 << " " << string2 << endl;
+    cout << a << " " << b << endl;
     return 0;
 }
 
