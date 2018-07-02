@@ -1,0 +1,1 @@
+add_executable(Exercise04 main.cpp)

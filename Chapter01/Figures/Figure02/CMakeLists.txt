@@ -1,0 +1,1 @@
+add_executable(Chapter01Figure02 main.cpp)
