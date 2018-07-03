@@ -1,0 +1,1 @@
+Simple function that exposes problems in Figure1.16

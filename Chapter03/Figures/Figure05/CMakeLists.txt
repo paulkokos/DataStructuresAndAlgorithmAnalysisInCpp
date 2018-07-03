@@ -1,0 +1,1 @@
+add_executable(Figure0305 main.cpp)
