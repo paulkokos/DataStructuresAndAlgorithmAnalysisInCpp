@@ -1,1 +1,1 @@
-add_executable(Exercise0210 main.cpp)
+add_executable(Chapter02-Exercise10 main.cpp)
