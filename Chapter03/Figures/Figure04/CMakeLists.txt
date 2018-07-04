@@ -1,1 +1,1 @@
-add_executable(Figure0304 main.cpp)
+add_executable(Chapter03-Figure04 main.cpp)
