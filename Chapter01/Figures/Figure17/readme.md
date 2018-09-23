@@ -1,1 +1,2 @@
-Simple function that exposes problems in Figure1.16
+ #####Figure1.16
+ Data member is a pointer; defaults are no good.
